@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/Stylin.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="JS/DecCalcObjects.js"></script>
+    <script src="JS/DecCalcMain.js"></script>
+    <script src="JS/DecCalcData.js"></script>
+    <script src="JS/DecCalcLocalStorage.js"></script>
+    <script src="JS/DecCalcUI.js"></script>
+    <script src="JS/DecCalcTemplates.js"></script>
+    <title></title>
+</head>
+
+<H1>Decorators Calculator</H1>
+</br>
+<h4>Please enter the dimensions of the room.</h4>
+<div id ="inputs">
+    Length
+    <input type="number" size="40" id="length" />
+    Width
+    <input type="number" size="40" id="width" />
+    Height
+    <input type="number" size="40" id="height" />
+</div>
+<div id = "inputs2">
+    <p>Information about windows.</p>
+    Length
+    <input type="number" size="40" id="windowLength" />
+    Width
+    <input type="number" size="40" id="windowWidth" />
+    Amount
+    <select id="windowSelect">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <input type="checkbox" name="hider" value="1" id="hideWindows"/>Remove Windows
+</div>
+<p id="textToHide1">Would you like to have Windows?        <input type="checkbox" name="hider" value="1" id="unhide1"/></p>
+<div id = "inputs3">
+    <p>Information about doors.</p>
+    Length
+    <input type="number" size="40" id="doorLength" />
+    Width
+    <input type="number" size="40" id="doorWidth" />
+    Amount
+    <select id = "doorSelect">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <input type="checkbox" name="hider" value="1" id="hideDoors"/>Remove Doors
+</div>
+<p id="textToHide2">Would you like to have Doors?<input type="checkbox" name="hider" value="1" id="unhide2"/></p>
+<p>Please select any/all of the decorations you would like to apply.</p>
+
+<div id ="checkboxGroup1">
+    <legend>Walls</legend>
+    <input type="checkbox" name="paint" value="2" id="checkbox1"/>Paint, £<label for="checkbox1" id="label1">2</label> litre <br />
+    <input type="checkbox" name="wallpaper" value="3" id="checkbox2"/>Wallpaper, £<label for="checkbox2" id="label2">3</label> per roll<br />
+    <input type="checkbox" name="tiles" value="3" id="checkbox3"/>Tiles, £<label for="checkbox3" id="label3">3</label>m2<br /><br />
+</div>
+<div id ="checkboxGroup2">
+    <legend>Floor</legend>
+    <input type="checkbox" name="carpet" value="5" id="checkbox4"/>Carpet, £<label for="checkbox4" id="label4">5</label>m2<br />
+    <input type="checkbox" name="tiles" value="10" id="checkbox5"/>Tiles, £<label for="checkbox5" id="label5">10</label>m2<br />
+    <input type="checkbox" name="wood" value="12" id="checkbox6"/>Wooden panels, £<label for="checkbox6" id="label6">12</label>m2<br />
+    <input type="checkbox" name="vinyl" value="6" id="checkbox7"/>Vinyl, £<label for="checkbox7" id="label7">6</label>m2<br />
+</div>
+<div id ="checkboxGroup3">
+    <legend>Window</legend>
+    <input type="checkbox" name="blinds" value="13"id="checkbox8"/>Blinds, £<label for="checkbox8" id="label8">13</label> per window<br />
+    <input type="checkbox" name="curtains" value="25" id="checkbox9"/>Curtains, £<label for="checkbox9" id="label9">25</label> per window<br /><br /><br />
+</div>
+<div id ="checkboxGroup4">
+    <legend>Door</legend>
+    <input type="checkbox" name="gloss" value="15" id="checkbox10" />Gloss, £<label for="checkbox10" id="label10">15</label> per litre<br />
+    <input type="checkbox" name="matte" value="13" id="checkbox11" />Matte, £<label for="checkbox11" id="label11">13</label> per litre<br /><br /><br />
+</div>
+<p>Once you have finished making your choices, press the 'Calculate' button to continue.</p>
+<div id="inputs7">
+    <button id="calculateButton">Calculate</button>
+    <button id="clearButton">Clear</button>
+</div>
+<p>Press Save to save your currently inputted values. Press load to retrieve any previous saved values.</p>
+<div id="inputs8">
+    <button id="saveButton">Save Values</button>
+    <button id="loadButton">Load Values</button>
+</div>
+<h3 id ="clickToHide">Templates - Click to reveal/hide</h3>
+<div id="hideTemplates">
+<p>Not happy with the prices on offer? No need to worry, that's what Templates are for! Any changes made to the price of materials can be saved as a Template for future use.
+    Simply change a few prices and then enter a name for your Template and press 'Save Template'. On future visits to the site you can load your saved Template via the list at the bottom.</p>
+<p>A few example Templates have been provided to give you an idea of how the system works. Simply select one and press Load Template. Don't worry if you delete them by mistake.
+    refresh the page and the example Templates will return.</p>
+<p>Change the price of any material?</p>
+<div id="inputs4">
+    <select id = "materialSelect">
+        <option value="1">Wall, Paint</option>
+        <option value="2">Wall, Wallpaper</option>
+        <option value="3">Wall, Tiles</option>
+        <option value="4">Floor, Carpet</option>
+        <option value="5">Floor, Tiles</option>
+        <option value="6">Floor, Wood</option>
+        <option value="7">Floor, Vinyl</option>
+        <option value="8">Window, Blinds</option>
+        <option value="9">Window, Curtains</option>
+        <option value="10">Door, Gloss</option>
+        <option value="11">Door, Matte</option>
+    </select>
+    New Price: <input type="number" size="40" id="newMaterialValue"/>
+    <button id="priceChangeButton">Change Price</button>
+</div>
+<p>Save current changes to prices as a template?</p>
+<div id="inputs5">
+    Template Name: <input type="text" size="40" id="templateName"/>
+    <button id="saveTemplate">Save Template</button>
+</div>
+<p>Select a template from this list and press load to retrieve it.</p>
+<div id="inputs6">
+    <select id = "templateList">
+    </select>
+    <button id="loadTemplate">Load Template</button>
+    <button id="deleteTemplate">Delete Template</button>
+</div>
+</div>
+</body>
+</html>

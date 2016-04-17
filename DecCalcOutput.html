@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/Stylin.css">
+    <meta charset="UTF-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="JS/DecCalcData.js"></script>
+    <script src="JS/DecCalcOutput.js"></script>
+    <title></title>
+</head>
+<style>
+    #Output {
+        padding: 10px;
+    }
+    #info {
+        padding: 10px;
+        width: 50%;
+    }
+    /* unvisited link */
+    a:link {
+        color: blue;
+    }
+
+    /* visited link */
+    a:visited {
+        color: purple;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: purple;
+    }
+
+    /* selected link */
+    a:active {
+        color: blue;
+    }
+</style>
+<>
+
+<h1>Here is your report.</h1><br /><br /><br />
+<div>These prices have been calculated under the following assumptions:</div>
+<ul>
+    <li>Walls: 1 Litre of paint will coat 10m2.</li>
+    <li>Doors: 1 Litre of paint will coat 12m2.</li>
+    <li>Aside from paint, all numbers have been rounded up to assure the correct amount of material.</li>
+</ul>
+<div id ="Output"></div>
+<p>Now that you have your information, you can Copy it to your clipboard or email it. Copying to the Clipboard
+    is as easy as pressing the button below. Unfortunately, this feature may not be supported by all browsers. If you
+    wish to manually copy and paste the information above and are unsure how, please have a look at
+    <a href="http://www.bleepingcomputer.com/tutorials/cut-copy-and-paste-in-windows/">this informative website</a> if you are a Windows user
+    or
+    <a href="http://www.wikihow.com/Copy-and-Paste-on-a-Mac">this equally informative website</a> if you are a Mac user.</p>
+<div id = "inputs9">
+    <button id="close">Close</button>
+    <button id="copy">Copy to Clipboard</button>
+</div>
+<p>If you would like to email this report to someone, you can enter their address here. Otherwise you can enter the
+    address yourself in your chosen email client.</p>
+<div id = "inputs10">
+    <input id="emailAddress" type="Address" size="40" id="length" />
+    <button id="email">Email</button>
+</div>
+</body>
+</html>
+
